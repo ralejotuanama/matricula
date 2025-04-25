@@ -1,5 +1,6 @@
 package com.colegio.matricula.service;
 
+import com.colegio.matricula.errores.RecursoNoEncontradoException;
 import com.colegio.matricula.model.Alumno;
 import com.colegio.matricula.repository.AlumnoRepository;
 import org.springframework.beans.factory.annotation.Autowired;

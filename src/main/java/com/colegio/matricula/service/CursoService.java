@@ -1,5 +1,6 @@
 package com.colegio.matricula.service;
 
+import com.colegio.matricula.errores.RecursoNoEncontradoException;
 import com.colegio.matricula.model.Curso;
 import com.colegio.matricula.repository.CursoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,6 +23,7 @@ public class CursoService {
     }
 
     public Curso obtener(Long id) {
-        return repo.obtenerPorId(id);
+       Curso curso = repo.obtenerPorId(id);
+       return curso;
     }
 }

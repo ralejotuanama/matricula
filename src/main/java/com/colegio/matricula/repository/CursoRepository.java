@@ -22,6 +22,10 @@ public class CursoRepository {
     }
 
     public Curso obtenerPorId(Long id) {
-        return jdbc.queryForObject("SELECT * FROM curso WHERE id = ?", new BeanPropertyRowMapper<>(Curso.class), id);
+        try {
+            return jdbc.queryForObject("SELECT * FROM curso WHERE id = ?", new BeanPropertyRowMapper<>(Curso.class), id);
+        } catch (Exception ex){
+            return null;
+        }
     }
 }
